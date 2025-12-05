@@ -1,8 +1,13 @@
-from dotenv import load_dotenv
-load_dotenv
+#pip install python-dotenv
+#pip install langchain-openai
+#pip install streamlit
 
-# from langchain_openai import ChatOpenAI 
-# chat_model = ChatOpenAI()
+
+#from dotenv import load_dotenv
+#load_dotenv
+
+from langchain_openai import ChatOpenAI 
+chat_model = ChatOpenAI()
 
 # subject = "AI"
 # result = chat_model.invoke(subject + "에 대한 시를 써줘.")
@@ -19,3 +24,4 @@ if st.button("시 작성하기"):
         result = chat_model.invoke(subject + "에 대한 시를 써줘")
 
         st.write(result.content)
+
