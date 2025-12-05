@@ -1,8 +1,8 @@
 from dotenv import load_dotenv
 load_dotenv
 
-from langchain_openai import ChatOpenAI 
-chat_model = ChatOpenAI()
+# from langchain_openai import ChatOpenAI 
+# chat_model = ChatOpenAI()
 
 # subject = "AI"
 # result = chat_model.invoke(subject + "에 대한 시를 써줘.")
@@ -17,4 +17,5 @@ st.write("시의 주제:" + subject)
 if st.button("시 작성하기"):
     with st.spinner("시 작성중 ..."):
         result = chat_model.invoke(subject + "에 대한 시를 써줘")
+
         st.write(result.content)
